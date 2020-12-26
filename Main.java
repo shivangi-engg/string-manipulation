@@ -7,20 +7,25 @@ public class Main
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("enter ur choice: vowelsCount, reverseString");
-		String s= sc.nextLine();
+		System.out.println("enter ur choice: 1 for vowels_Count, 2 for reverse_String, 3 for  word_count");
+		int s= sc.nextInt();
 		switch(s)
 		{
-			case "vowelsCount":
+			case 1:
 			printpackage.PrintLogicVowelsCount PrintLogicVowelsCountInstance = new printpackage.PrintLogicVowelsCount();
 			PrintLogicVowelsCountInstance.printVowelsCount();
 			break;
 
-			case "reverseString":
+			case 2:
 			printpackage.PrintLogicStringReverse PrintLogicStringReverseInstance = new printpackage.PrintLogicStringReverse();
 			PrintLogicStringReverseInstance.printReverseString();
 			break;
 
+
+			case 3:
+			printpackage.PrintLogicWordCount PrintLogicWordCountInsatance = new printpackage.PrintLogicWordCount();
+			PrintLogicWordCountInsatance.printWordCount();
+			break;
 
 			default:
 			System.out.println("not an option");

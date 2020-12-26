@@ -11,14 +11,10 @@ public class PrintLogicStringReverse
 	System.out.println("enter the string input:");
 	String s= sc.nextLine();	
 	char[] arr=new char[s.length()];
-	for (i=0;i<s.length();i++ ) 
+	for (i=s.length()-1;i>=0 ;i-- ) 
 	{
 		arr[i]= s.charAt(i);
-	}
-	System.out.println("the reverse of string is:");
-	for (j=s.length()-1;j>=0 ;j-- ) 
-	{
-		System.out.println(arr[j]);
+		System.out.println(arr[i]);	
 	}
 }
 }

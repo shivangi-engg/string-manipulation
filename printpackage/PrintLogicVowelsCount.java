@@ -6,55 +6,27 @@ public class PrintLogicVowelsCount
 {
 	public void printVowelsCount()
 	{
-		int count,i;
+		int count,i,j;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter the string input:");
 		String s= sc.nextLine();
 		count = 0;
-		char[] arr= new char[s.length()];
+		char[] arr_vowels = {'a','e','i','o','u','A','E','I','O','U'};
 		for (i=0;i<s.length() ;i++ ) 
 		{
-			arr[i]= s.charAt(i);
-		}
-		for (char j:arr) 
-		{
-			switch(j)
+			char a= s.charAt(i);
+			for (j=0;j<10 ;j++ ) 
 			{
-				case 'a':
-					count=count+1;
-					break;
-				case 'e':
-					count=count+1;
-					break;
-				case 'i':
-					count=count+1;
-					break;
-				case 'o':
-					count=count+1;
-					break;
-				case 'u':
-					count=count+1;
-					break;
-				case 'A':
-					count=count+1;
-					break;
-				case 'E':
-					count=count+1;
-					break;
-				case 'I':
-					count=count+1;
-					break;
-				case 'O':
-					count=count+1;
-					break;
-				case 'U':
-					count=count+1;
-					break;
-					default:
-					break;
-			}			
-			
+				char b= arr_vowels[j];
+				if (a == b) 
+				{	
+					count++;
+						
+				}	
+			}
 		}
 		System.out.println("the no. of vowels is:"+count);
+		
+		
 	}
 }
